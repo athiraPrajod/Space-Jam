@@ -1,14 +1,16 @@
 from tkinter import *
 from PIL import ImageTk,Image
 
+#def funct():
 root = Tk()
 root.title("APP")
 root.geometry('450x400')
 root.config(bg = "yellow")
 #root.iconbitmap('C:\\Users\\tanis\\OneDrive\\Desktop\\runtime')
-myimg = ImageTk.PhotoImage(Image.open("password.png"))
-mylabel = Label(root,image = myimg)
-mylabel.grid(row = 0,column = 0)
+root.myimg = ImageTk.PhotoImage(Image.open("password.png"))
+##myimgi = PhotoImage(file = 'password.png')
+##mylabel = Label(root,image = myimgi)
+##mylabel.grid(row = 0,column = 0)
 lab1 = Label(root,text = "Please help me unlock my PC",font = 24)
 lab1.grid(row = 1,column = 0)
 lab2 = Label(root,text = "It is a 5 digit password. Solve the following questions to get the password")
@@ -89,16 +91,18 @@ def new_pg(i):
                     final_lab = Label(main,text = "OOPS!!Retry the level again")
                     final_lab.grid(row = 2,column = 0)
                     btn.destroy()
-                btn_nxt = Button(main,text = "CLOSE")#,bg = "blue")
+                btn_nxt = Button(main,text = "CLOSE",bg = "blue")
                 btn_nxt.grid(row = 4,column = 1)
         
             btn = Button(main,text = "ENTER",command = lambda : onclick(x))
             btn.grid(row = 3,column = 0)
             #btn.destroy()
-        
     
+
 btn_nxt = Button(root,text = "NEXT",bg = "red",command = lambda : nxt_page(btn_nxt,lt,1))
 btn_nxt.grid(row = 3,column = 1)
 
-            
 root.mainloop()
+
+            
+

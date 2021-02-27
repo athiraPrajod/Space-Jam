@@ -7,9 +7,9 @@ root=Tk()
 #root.geometry("600x400+-1900+100")
 root.geometry("700x700")
 root.title("Word Jumble")
-my_img=ImageTk.PhotoImage(Image.open("pic.png"))
-my_label=Label(image=my_img)
-my_label.pack()
+##my_img=ImageTk.PhotoImage(Image.open("pic.png"))
+##my_label=Label(image=my_img)
+##my_label.pack()
 wel_lab=Label(root, text="Hello and welcome to level one of Runtime Terror!")
 wel_lab.pack()
 lab2=Label(root, text="In this game you need to find the correct word using the jumbled words.\nClick on 'Answer' after typing the word in the text box.\nIf you got it correct click on 'Next Word' otherwise try again \n Stuck?\nClick on Hint to get help")
@@ -57,7 +57,9 @@ def shuffler():
         top=Toplevel()
         lvl_comp_lab=Label(top,text=" Congratulations,Level Completed!")
         lvl_comp_lab.pack()
-        lvl2=Button(top, text="Click here to go to Level 2")
+        def back():
+            import alllevels
+        lvl2=Button(top, text="Close",bg = 'blue',command = lambda : back())
         lvl2.pack()
 
 #Create answer Function

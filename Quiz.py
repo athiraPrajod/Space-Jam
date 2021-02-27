@@ -86,8 +86,8 @@ Q1 = Label(root, text = "Which of these is a keyword?", font = ("Arial", 30))
 Q1.pack()
 buttons(answers[0])
 
-contImg = tk.PhotoImage(file = "Continue.png")
-contBtn = tk.Button(root, image = contImg, border = 0, command = nextPressed)
+#contImg = tk.PhotoImage(file = "Continue.png")
+contBtn = tk.Button(root, text = "Continue", border = 0, command = nextPressed)
 contBtn.pack(pady = 30)
 
 # Question 2

@@ -6,16 +6,18 @@ root = Tk()
 root.title("APP")
 root.geometry('450x400')
 root.config(bg = "yellow")
-#root.iconbitmap('C:\\Users\\tanis\\OneDrive\\Desktop\\runtime')
-root.myimg = ImageTk.PhotoImage(Image.open("password.png"))
+
+##root.iconbitmap('C:\\Users\\tanis\\OneDrive\\Desktop\\runtime')
+##root.myimg = ImageTk.PhotoImage(Image.open("password.png"))
 ##myimgi = PhotoImage(file = 'password.png')
 ##mylabel = Label(root,image = myimgi)
 ##mylabel.grid(row = 0,column = 0)
+
 lab1 = Label(root,text = "Please help me unlock my PC",font = 24)
 lab1.grid(row = 1,column = 0)
-lab2 = Label(root,text = "It is a 5 digit password. Solve the following questions to get the password")
+lab2 = Label(root,text = "It is a 4 digit password. Solve the following questions to get the password")
 lab2.grid(row = 2,column = 0)
-lt = [mylabel,lab1,lab2]
+lt = [lab1,lab2]
 
 def nxt_page(btn_nxt,lt,i):
     clear(btn_nxt,lt)
@@ -91,10 +93,12 @@ def new_pg(i):
                     final_lab = Label(main,text = "OOPS!!Retry the level again")
                     final_lab.grid(row = 2,column = 0)
                     btn.destroy()
-                btn_nxt = Button(main,text = "CLOSE",bg = "blue")
+                def levels():
+                    import alllevels
+                btn_nxt = Button(main,text = "CLOSE",bg = "blue",command = lambda : levels())
                 btn_nxt.grid(row = 4,column = 1)
         
-            btn = Button(main,text = "ENTER",command = lambda : onclick(x))
+            btn = Button(main,text = "ENTER",bg = "purple",command = lambda : onclick(x))
             btn.grid(row = 3,column = 0)
             #btn.destroy()
     

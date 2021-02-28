@@ -7,12 +7,14 @@ l1.grid(row=0, column=0 ,columnspan=3)
 
 def call1():
     import Level1
+def call2():
+    import level2
 def call5():
     import level3
     
 level1=Button(lvl_pg, text="Level 1",padx = 20,pady = 20,command = lambda : call1())
 level1.grid(row=1, column=0, padx=10,pady=5 )
-level2=Button(lvl_pg, text="Level 2",padx = 20,pady = 20 )
+level2=Button(lvl_pg, text="Level 2",padx = 20,pady = 20, command = lambda : call2() )
 level2.grid(row=1, column=1, padx=10,pady=5)
 level3=Button(lvl_pg, text="Level 3", state=DISABLED,padx = 20,pady = 20)
 level3.grid(row=1, column=2, padx=10,pady=5)

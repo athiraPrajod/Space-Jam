@@ -5,7 +5,7 @@ from PIL import ImageTk,Image
 root = Tk()
 root.title("APP")
 root.geometry('450x400')
-root.config(bg = "yellow")
+root.config(bg = "black")
 
 ##root.iconbitmap('C:\\Users\\tanis\\OneDrive\\Desktop\\runtime')
 ##root.myimg = ImageTk.PhotoImage(Image.open("password.png"))

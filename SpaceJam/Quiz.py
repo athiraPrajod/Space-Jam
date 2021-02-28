@@ -1,5 +1,3 @@
-# the json module to work with json files 
-import json
 import tkinter
 from tkinter import *
 import random
